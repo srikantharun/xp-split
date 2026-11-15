@@ -1,0 +1,9 @@
+[submodule "xp-platform"]
+	path = xp-platform
+	url = git@github.com:srikantharun/xp-platform.git
+[submodule "xp-pricer-templates"]
+	path = xp-pricer-templates
+	url = git@github.com:srikantharun/xp-pricer-templates.git
+[submodule "xp-backstage"]
+	path = xp-backstage
+	url = git@github.com:srikantharun/xp-backstage.git
