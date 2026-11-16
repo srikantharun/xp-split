@@ -28,3 +28,11 @@ tag and a pricers tag** and copies the platform in as real content — so "how i
 computes" evolve on independent release cadences, and the build machinery can never be edited by a
 developer (enforced by the review guards in `xp-platform`). The three submodules above are pinned to
 specific commits, so this front door always points at a known-good combination.
+
+## Build proof — a generated example with CI
+
+[`quant-pricer-ci`](https://github.com/srikantharun/quant-pricer-ci) is produced by the scaffolder
+(platform-v1.2.0 + pricers-v1.0.0, all four pricers) and carries **GitHub Actions** that build/test it
+on free runners: **ci-linux** (`ubuntu-latest`, `ci-ubuntu-gcc`) and **ci-windows** (`windows-latest`,
+`ci-win-msvc`). Both use vcpkg with GitHub Actions binary caching (first run compiles Boost+QuantLib,
+then caches). This exercises the Ubuntu and Windows build paths on real CI.
